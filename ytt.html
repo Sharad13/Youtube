@@ -1,0 +1,150 @@
+<html>
+    <style>
+        #nav{
+           display:flex;
+
+            width:100%;
+            height:13%
+        }
+        #bars{
+            width:35px;
+            height:30px;
+            align-self: center;
+            margin-left: 20px;
+            display:flex;
+            flex-direction: column;
+        }
+        .line{
+            width:25px;
+            height:3px;
+            background-color: rgb(54, 52, 52);
+            margin:2px;
+            border-radius: 2px;
+        }
+        #logo{
+            height:80%;
+            align-self: center;
+            margin-left: 30px;
+        }
+        #input{
+            height:50%;
+            align-self: center;
+            margin-left: 140px;
+            width:650px;
+            font-size: 18px;
+        }
+        #search{
+            width:60px;
+            height:50%;
+            align-self: center;
+            border:1px solid grey;
+            /* background-color: rgb(240, 233, 233); */
+         
+        }
+        #icon{
+            width:30px;
+            height:20px;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        #vid{
+            display:grid;
+         grid-template-columns: repeat(4,15%);
+         gap:10%;
+         margin-left:200px
+         
+        }
+        #vid>div{
+            padding:10%;
+            width:400;
+             height:200;
+             margin-bottom: 0;
+            /* border:1px solid black */
+
+        }
+        #account{
+            background-color: rgb(2,136,209);
+            display:flex;
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            color:white;
+            width:9px;
+            height:12%;
+            border-radius: 50px;
+            align-self: center;
+            align-items: center;
+            padding:12px;
+           
+        }
+        #bell{
+            margin-left: 160px;
+            height:70%;
+            align-self: center;
+        }
+    </style>
+    <body>
+      <div id=nav>
+          <div id="bars">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+          </div>
+          <image id="logo" src="https://cdn.mos.cms.futurecdn.net/8gzcr6RpGStvZFA2qRt4v6-1200-80.jpg"></image>
+          <input type="text" id="input" placeholder="search">
+          <div onclick="yt()" id="search">
+              <image id="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAeFBMVEX///9AQEA9PT0zMzM0NDQ6OjouLi43NzcrKystLS1ycnIoKCj6+vp5eXn29vbw8PClpaVtbW2Pj4/c3Nx+fn7IyMhXV1fj4+OwsLDBwcHp6enR0dGJiYlcXFwiIiJnZ2ednZ1JSUlRUVGVlZWurq7ExMSbm5u5ubnd0EP7AAAGs0lEQVR4nO2d63aqOhCAJSEBBBFR8IKXaru37/+GR1u7ajsThCTdCZ75/tc1QyaTuSUdjQiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAZDluVXssy1IL/Apiq24/oY8SSRXBx34/KtmboWyhrzt3GSyjASjAUfMCaiUKZ8cl66Fs6c5vV4WbQAR3B5epm7FtGEvKjjiCnUuy1nGO9WQ92X88U+bFfvpiRPtxvXwmown/Gog3ofRHwxtB05XcSqzafQMSlz10L3odj30+9jHVeuxe7MvOa99bsiDwPZjkXaxb9giHAIyzg9SE39rsQT70+Ouei/A+8JT55b6lrqWugnImxcK9FGkRrqd4Gla9dqqClicwUvyLNrRVRYUjAIfF1Fawr6quL68R68pIUXhHjsjbiH7mbefgyySMbpabYty3IxO6Yxb8+qWOhdBSAPWiRmPNm9VvcH3XJd1mlbbiVqZ6ooOKgPeiHrFbYim+Ik1X8Vbv+5Dq0UShsV+7G6TtEcUqWOiVfeZq7yMiwet6e284MyCkp92oq1Qsrw+NgnrgNFLUCM/4HkHSkU+WC67ZIp5LME//PYGzud7nEL5VXHH1jhlsoCX1KpBWpm4ti9uNTgB0f49xel7sEcjdbEqY+jWDJUxdSP6tQYc/ji2M/CNmjEEJW/JHMv0HCNHfu6+iXHVPQieEN3Ie9f4K0wjxq+2Be4L6gjTbt60XsKREUf3GkRIl9eL6bENrR0fyae4PZhPb3MJzkS+4mDZXl7g0WksW76ekac1t61r3mFfkZMtH9tBw3CeTcDMdK9fqOsgsGDmFmUVoMltCuDJcQX0W1c8wazCmlSRFrDLyZ1Th57TICDZ2YFFqhh9GpJVj3gEvI3ox8sgediO0uyarGBZ0Vi1jtqwCKywOVGROQx/OIZzDGkyyEGGLIZ7xq4s50Gbluwa4w9H/TOYWFFVj1grBybtnCh4TtNg2EVMTX9yRyENS6jmuz4U0N2Mv5N4GoMT1gzaYCRWvjewC5YYEFUTXLgFYR5P2UGPhu3IKomOag7WPAKiPeyIKomMCm3EETCA9HYe+nzP1hDuA8Xxj8Ke60O9+Hz+1LkPDwa/yYIIlyeh0jRwdgrTGFM47JTingF01THs7gUZuTcNNWBCVloVjUw4w3mh6YfHIY0TktRSI5v6BaQySONPpY9prBOY7gRK/jNNLsgloBDeIYZOexGOu7NLGC91CxDhGV9x03SM1LzNnEMK/h7idtBzA2UyMiqkEaPcNwFRkRK9W8UIg1Eo0aPDV5gk1u/KAzjXAshhClLZFxIe9b+BZmPS52PKiAdP91OA9IFcW+kqPcLIr0sEZvhNOpG2iHDptoSnWC5RL6Vef3VAjC/0Pv02CCG+zmFK8iReJ0t7RueNthslQ8jUSPFYBuL+rVoGnTMmLtsO32xQedLGeuzig06mRiEvyZ0P16R0baLij0C1DM+R+3NJbYMH2RnSVcbK/HbGm5nFL6xUgzby1mXobSN6uq3QYBrHVhc+UCkD7199qK6+h26HaT5zgbdie/LWP9p/cvzUXV334vD/ouV8nYli3fK7CBbndQ3o9nOfcB2z0S5ihenKl8beHLn1TbGz4jPv0vN2zwWyeq2e/iRDCarZvqpZjZtilkgH759wj26+XTZiu13X5ngMg52s/FkfKhZLMMOV2UvKrrPne5Q3tC7U5OJKz0eJeCO52e/88fkQQwVoVeGusZjLzP82ouV9rstbSp6ZahVp6eveuKXoZo+3oLil6FOd3ovKA1IxdHWwKXi9yx9M9TRWn3H/gHh6aBQ0a+jfzQdxzoOh6XlqFGFDZ4Z6mgd9N+Nsr7mEgvVH/qm4iWv7f6mYHCtPvJbTWasVNEvQ73oWIatudE3/WTwVSSfDGUVL9uxCFreLvlCJPW39z2VKnrmUa9k1WGvfJ71pp5MFz9zefUq+maoV/LVjEv8PSEmwoRNsBLHgAz1nbz6uwskvz4kfFPt/Rlhfjy8IMWNd4ZkqDfy5booZzWT6T6VQT0u36plW9NlOB5Vm8Gci/oM0FD7MiyPqgUZ6jNAhvoMkKE+A2SozwAZ6jMwtHxRA6WKnUd2vEdpqJEf7w5aQLWKju8q2EShIvdl9M0CuKE+k4b4Kj6RlY5wFR2/BGYbaKiRV2NTFgCrmA7t30Q95IeK0os3au3yzVBDrwZRbHG3ivzgxV0F60xuI9cifUIT/aCIEs7l8P4XXQ/y6nyunuscJAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAhioPwHTv5Np5F3BbQAAAAASUVORK5CYII="></image>
+          </div>
+          <image id="bell" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAADNCAMAAAC8cX2UAAAAbFBMVEX///9jZGZXWFpdXmBgYWOgoKFZWlzy8/P39/dcXV9VVllqa21ZWl3Q0NHW1tdTVFbl5eV5enyVlpfZ2dq+vr/s7O2sra6EhYa1tbbg4OFub3F0dXempqfJycqPkJFrbG6JiouYmZqysrNISUxoSU0bAAAE3ElEQVR4nO2d62KqOhBGC8SAkUpVvFur+7z/O25ru5MJRLnr5Pitn6JpljOZJID07Q0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMCJfL5enz+f3YsBWOzim8dyKSMhIilui8f7jyF6NTR5Fk2SG8eOYfBLtrrxljiIwveh+jYcBxUE4ob3SltfvHPnW2IhLsc2Q/ZwCOZXM7f3MgsI0vWWOBDfx9Rh6H72yyn9cXJ6H8aWtiOkv9ZBEI6G72t//LN2e38Jqi3WpTckE/0On7yPkliVvWVgMSkeJ9YXb2/yfGR5yV3xeGhrB8XjE2sQKE/q2kZZ1uUcrtKOd5Z35sU8NrXqtHKMzSptOq9f21gO3+uuxCntsWtWTqq131Y0Y0Rp9PNjT8t0Vlp7JvlpXLAWYl5eouY0Z8bHh3S9Awca7NKo3B6VFEGJKA3PxQW45a2Y71m2tLNF68VMRWXnX/NsXRDPaZ6Ht3c1HKAzbiHDlyflCDTJ9Wxuz/B05R6V5wNGrMiMHf6xDuXhzUhrt7H9RR1JFeC8G4tpfOwytC6WbyfqbH1oR9PjkSLNOJqACquby6Ay1D/IGf0Y/RrTWxvzp0PrWUYL1IerfLuJvugA/yRlzblB5cDayEkam2Va2/qSJpY3yZ8x0z0JCbag249ENLC+xJvmeUKqmuIZ7pOxyxbk9X0j60tY5+TDuZkbxixHNzlVZFXxkXS53UPRhTyp5umjlepwMMOQbpkWmcvsPiH5/NRUc8lxiWqsI7rZnDRM8W+s80wz3YDYP9qpmneTyxlZQG9Sp1hVuMmajIRb8btgcNRBoSM7aTywf+JKd9jmjCPDomaiGm7Nq6vi5romdBibYi6+Hu91n3d339oFu9AI4yw/64o2Jmc687baQUhm/rmzbRZMTETI7NN0pWKIyJqFZBKzbfdS7xnounSp3E51CEnrpm7Ih5vd5VMHJCI7hk3LgnYVJEXNLHtpuWSAWaLJqXl11jrH7SzP9deXui8LPwsjGJp9UumEeDNM6x96sERnxx9/HjrYdGhPW9fxb+jCXEdbzMp/+3nEJhwkN7sMbXtwm2RitQtb6HSmM+u85gk0N3QlOtItKU4nzD/1FCPJJqL9rP2NOJmWTN6wKuWkW2T52CnYVpUwCxbJ6Xy52XGQJEw6LFau3qb9rR5EktMMNs/CXzLzYpc12tWQNPWfbp/T3jOJNebFj27TNl0BvJn2eZ4+JXTVZlW067PtGu0X1fbglhUHLxrtRdex7We0oQ3t+nha0hadttveanc7ywBtv4A2tBtoc7vgVQ9oQxva0IY2tJ9t0Ir3Vvdm+a/9otGGNrShXaHN6ZpufaDdTtvLJE92nW5m4HZ7Tk2SNvfP20T+efdg7aF3L9beefdk7Zl3b9Zeefdo7ZF3r9beePds7Yl379Z+ePdv7YN33PHWQzfq2VpVDKPN7JcxZaDdI2H1H34uccf7dNyw+qkEAAC8OquRA46P2OiXdRqVUH+qP+c5rqc1sHygSr9MHeuZzM/fCTSivDHl9uiBQchL4c78vNjVkFnht5/So4dSdyCZWN5j9qdOeiLZ0wdksn9ibX+swutzAu//q4n/IclmHch0cnwpaQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaMNfFNM7BKJ2WsMAAAAASUVORK5CYII="></image>
+          <div id="account">S</div>
+        </div>
+        <div id="vid"></div>
+    </body>
+    
+</html>
+
+<script>
+    let videos=document.getElementById("vid")
+    
+async function defaultVid(){
+
+   let res=await fetch(`https://youtube.googleapis.com/youtube/v3/search?q=most%20popular%20videos%20in%20india&key=AIzaSyCp851mIgvhTmvewpiYYriW_UpVeAxmwW8&maxResults=20`)
+let data=await res.json()            //array
+console.log(data)
+
+
+let items=data.items  //or let {name}=data
+
+items.filter((el)=>{
+   return el.id.videoId!=undefined
+})
+
+items.forEach(({id:{videoId}}) => {
+   let div=document.createElement("div")
+   div.innerHTML=`<iframe width="250" height="200" src="https://www.youtube.com/embed/${videoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+   videos.append(div)
+});
+}
+defaultVid()
+
+async function yt(){
+    videos.innerHTML=null
+    let q=document.getElementById("input").value
+       let res=await fetch(`https://youtube.googleapis.com/youtube/v3/search?q=${q}&key=AIzaSyCp851mIgvhTmvewpiYYriW_UpVeAxmwW8&maxResults=20`)
+   let data=await res.json()            //array
+  console.log(data)
+  
+
+   let items=data.items  //or let {name}=data
+   
+   items.filter((el)=>{
+       return el.id.videoId!=undefined
+   })
+
+   items.forEach(({id:{videoId}}) => {
+       let div=document.createElement("div")
+       div.innerHTML=`<iframe width="250" height="200" src="https://www.youtube.com/embed/${videoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+       videos.append(div)
+   });
+}
+
+</script>
